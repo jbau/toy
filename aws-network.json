@@ -1,0 +1,436 @@
+{
+  "name": "Network (AWS)",
+  "description": null,
+  "eventFilterType": "BYCHART",
+  "url": "aws-network",
+  "parameters": {},
+  "sections": [
+    {
+      "name": "Network",
+      "rows": [
+        {
+          "charts": [
+            {
+              "name": "NETWORK IN (p99)",
+              "sources": [
+                {
+                  "name": "0",
+                  "query": "0",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "0",
+                  "query": "0",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "0",
+                  "query": "",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p99",
+                  "query": "percentile(99, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": "bps",
+              "base": 1,
+              "noDefaultEvents": true,
+              "interpolatePoints": false,
+              "includeObsoleteMetrics": false,
+              "description": "",
+              "chartSettings": {
+                "type": "stacked-area",
+                "max": null,
+                "min": null,
+                "lineType": null,
+                "stackType": "zero",
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": null,
+                "showLabels": null,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "MEAN"
+            },
+            {
+              "name": "NETWORK IN (percentiles)",
+              "sources": [
+                {
+                  "name": "p99.9",
+                  "query": "percentile(99.9, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p99",
+                  "query": "percentile(99, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p95",
+                  "query": "percentile(95, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p90",
+                  "query": "percentile(90, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p85",
+                  "query": "percentile(85, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p75",
+                  "query": "percentile(75, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p50",
+                  "query": "percentile(50, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "mean",
+                  "query": "avg( align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p25",
+                  "query": "percentile(25, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p5",
+                  "query": "percentile(5, align(1m, mean, 8 * ts(aws.ec2.networkin) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": "bps",
+              "base": 0,
+              "noDefaultEvents": true,
+              "interpolatePoints": false,
+              "includeObsoleteMetrics": false,
+              "description": null,
+              "chartSettings": {
+                "type": "line",
+                "max": null,
+                "min": null,
+                "lineType": "linear",
+                "stackType": null,
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": null,
+                "showLabels": null,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "MEAN"
+            },
+            {
+              "name": "Network OUT (p99)",
+              "sources": [
+                {
+                  "name": "0",
+                  "query": "0",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "0",
+                  "query": "0",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "0",
+                  "query": "0",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "0",
+                  "query": "0",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p99",
+                  "query": "percentile(99, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": "bps",
+              "base": 1,
+              "noDefaultEvents": true,
+              "interpolatePoints": false,
+              "includeObsoleteMetrics": false,
+              "description": "",
+              "chartSettings": {
+                "type": "stacked-area",
+                "max": null,
+                "min": null,
+                "lineType": null,
+                "stackType": "zero",
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": null,
+                "showLabels": null,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "MEAN"
+            },
+            {
+              "name": "NETWORK OUT (percentiles)",
+              "sources": [
+                {
+                  "name": "p99.9",
+                  "query": "percentile(99.9, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p99",
+                  "query": "percentile(99, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p95",
+                  "query": "percentile(95, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p90",
+                  "query": "percentile(90, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p85",
+                  "query": "percentile(85, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p75",
+                  "query": "percentile(75, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p50",
+                  "query": "percentile(50, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "mean",
+                  "query": "avg(align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p25",
+                  "query": "percentile(25, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "p5",
+                  "query": "percentile(5, align(1m, mean, 8 * ts(aws.ec2.networkout) / 60))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": "bps",
+              "base": 0,
+              "noDefaultEvents": true,
+              "interpolatePoints": false,
+              "includeObsoleteMetrics": false,
+              "description": null,
+              "chartSettings": {
+                "type": "line",
+                "max": null,
+                "min": null,
+                "lineType": "linear",
+                "stackType": null,
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": null,
+                "showLabels": null,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "MEAN"
+            }
+          ]
+        },
+        {
+          "charts": [
+            {
+              "name": "TOP MACHINES (NETWORK IN)",
+              "sources": [
+                {
+                  "name": "net",
+                  "query": "8 * ts(aws.ec2.networkin and Region=*)/60",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                },
+                {
+                  "name": "above_p90",
+                  "query": "if (at(\"now\", ${net}) > percentile(90, ${net}), ${net})",
+                  "disabled": true,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": "bps",
+              "base": 0,
+              "noDefaultEvents": false,
+              "interpolatePoints": true,
+              "includeObsoleteMetrics": false,
+              "description": null,
+              "chartSettings": {
+                "type": "table",
+                "max": null,
+                "min": null,
+                "lineType": null,
+                "stackType": null,
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": true,
+                "showLabels": false,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "LAST"
+            },
+            {
+              "name": "TOP MACHINES (NETWORK OUT)",
+              "sources": [
+                {
+                  "name": "net",
+                  "query": "8 * ts(aws.ec2.networkout and Region=*)/60",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": "bps",
+              "base": 1,
+              "noDefaultEvents": false,
+              "interpolatePoints": true,
+              "includeObsoleteMetrics": false,
+              "description": "",
+              "chartSettings": {
+                "type": "table",
+                "max": null,
+                "min": null,
+                "lineType": null,
+                "stackType": null,
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": true,
+                "showLabels": false,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "LAST"
+            },
+            {
+              "name": "Network In vs. CPU",
+              "sources": [
+                {
+                  "name": "netin",
+                  "query": "align(10m, mean, 8 * ts(aws.ec2.networkin and Region=*)/60)",
+                  "disabled": null,
+                  "scatterPlotSource": "X"
+                },
+                {
+                  "name": "cpu",
+                  "query": "align(10m, mean, ts(aws.ec2.cpuutilization and Region=*))",
+                  "disabled": null,
+                  "scatterPlotSource": "Y"
+                }
+              ],
+              "units": null,
+              "base": 0,
+              "noDefaultEvents": false,
+              "interpolatePoints": true,
+              "includeObsoleteMetrics": false,
+              "description": null,
+              "chartSettings": {
+                "type": "scatterplot-xy",
+                "max": null,
+                "min": null,
+                "lineType": null,
+                "stackType": null,
+                "expectedDataSpacing": null,
+                "windowing": "full",
+                "windowSize": null,
+                "showHosts": null,
+                "showLabels": null,
+                "webgl": false,
+                "xMax": null,
+                "xMin": null,
+                "yMax": null,
+                "yMin": null,
+                "timeBasedColoring": null
+              },
+              "summarization": "LAST"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
